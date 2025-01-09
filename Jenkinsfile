@@ -3,7 +3,7 @@ pipeline {
     environment {
         MAVEN_HOME = '/usr/share/maven'  // maven home directory.  Obtain home directory using mvn --version
         ARTIFACT_PATH = 'JJtechBatchApp/target/JJtechBatchApp.war'
-        TOMCAT_URL = 'http://54.227.59.60:8080/'  // replace with your tomcat urll
+        TOMCAT_URL = 'http://3.95.56.169:8080'  // replace with your tomcat url
 
     }
     stages {
@@ -40,7 +40,7 @@ pipeline {
         // For quality gates, the pipeline will wait for sonar to send back a success quality gate check.  : https://docs.sonarsource.com/sonarqube-server/9.9/analyzing-source-code/scanners/jenkins-extension-sonarqube/
         stage("Quality Gate") {        
              steps {
-                timeout(time: 10, unit: 'MINUTES') {
+                timeout(time: 2, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
                 }
             }
@@ -73,7 +73,7 @@ pipeline {
                     nexusArtifactUploader(
                         nexusVersion: 'nexus3',
                         protocol: 'http',
-                        nexusUrl: '52.90.137.110:8081',  //replace me 
+                        nexusUrl: '3.91.207.3:8081',  //replace me 
                         repository: repository,
                         groupId: groupId,
                         version: version,
