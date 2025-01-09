@@ -9,7 +9,7 @@
   </proxies>
   <servers>
     <server>
-      <id>nexusdeploymentrepo</id>    <!-- add credentials to your nexus -->
+      <id>nexusdeploymentrepo</id>    <!-- add credentialss to your nexuss -->
       <username>admin</username>
       <password>admin1</password>
     </server>
