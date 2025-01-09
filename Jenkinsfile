@@ -40,7 +40,7 @@ pipeline {
         // For quality gates, the pipeline will wait for sonar to send back a success quality gate check.  : https://docs.sonarsource.com/sonarqube-server/9.9/analyzing-source-code/scanners/jenkins-extension-sonarqube/
         stage("Quality Gate") {        
              steps {
-                timeout(time: 2, unit: 'MINUTES') {
+                timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
                 }
             }
