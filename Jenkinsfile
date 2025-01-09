@@ -3,7 +3,7 @@ pipeline {
     environment {
         MAVEN_HOME = '/usr/share/maven'  // maven home directory.  Obtain home directory using mvn --version
         ARTIFACT_PATH = 'JJtechBatchApp/target/JJtechBatchApp.war'
-        TOMCAT_URL = 'http://54.227.59.60:8080/'  // replace with your tomcat url
+        TOMCAT_URL = 'http://54.227.59.60:8080/'  // replace with your tomcat urll
 
     }
     stages {
@@ -86,7 +86,7 @@ pipeline {
             }
         }
 
-        // requires the Deploy to Container Plugin 
+        // requires the Deploy to Container Plugin
         //https://www.jenkins.io/doc/pipeline/steps/deploy/?utm_source=chatgpt.com#deploy-deploy-warear-to-a-container
         stage('Deploy to Tomcat Server') {
             steps {
